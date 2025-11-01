@@ -41,7 +41,7 @@ public class Practice {
      * Count how many words are longer than n characters and shorter than m
      * characters in a HashSet
      * 
-     * @param a non-empty, non-null, all-lowercase HashSet of words
+     * @param words a non-empty, non-null, all-lowercase HashSet of words
      * @return the amount of words that fit within the length limits
      */
     public static int wordLenCount(Set<String> words, int n, int m) {
@@ -52,5 +52,25 @@ public class Practice {
             }
         }
         return count;
+    }
+
+    /**
+     * Finds the difference between how many odd keys are compared to even keys in
+     * an HashMap
+     * 
+     * @param nums a non-empty, non-null HashMap of number keys with number values
+     * @return the difference in amoune of odds and amount of evens
+     */
+    public static int evenOddDiff(Map<Integer, Integer> nums) {
+        int odds = 0;
+        int evens = 0;
+        for (int num : nums.keySet()) {
+            if (num % 2 == 1) {
+                odds++;
+            } else {
+                evens++;
+            }
+        }
+        return odds - evens;
     }
 }

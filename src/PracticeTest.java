@@ -92,4 +92,18 @@ public class PracticeTest {
         // Words within 4-6 char length:
         assertEquals(0, actual);
     }
+
+    @Test
+    void testEvenOddDiffMoreOdds() {
+        Map<Integer, Integer> numbers = new HashMap<>();
+        numbers.put(1, 24);
+        numbers.put(2, 84);
+        numbers.put(3, -4);
+        numbers.put(5, 33);
+
+        int actual = Practice.evenOddDiff(numbers);
+
+        // 3 odds - 1 even = 2
+        assertEquals(2, actual);
+    }
 }
