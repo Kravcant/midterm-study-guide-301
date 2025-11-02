@@ -106,4 +106,46 @@ public class PracticeTest {
         // 3 odds - 1 even = 2
         assertEquals(2, actual);
     }
+
+    @Test
+    void testEvenOddDiffMoreEvens() {
+        Map<Integer, Integer> numbers = new HashMap<>();
+        numbers.put(0, 24);
+        numbers.put(2, 84);
+        numbers.put(3, -4);
+        numbers.put(4, 33);
+
+        int actual = Practice.evenOddDiff(numbers);
+
+        // 1 odd - 3 evens = -2
+        assertEquals(-2, actual);
+    }
+
+    @Test
+    void testSecondLargestPositivesOnly() {
+        Map<Integer, Integer> numbers = new HashMap<>();
+        numbers.put(1, 0);
+        numbers.put(2, 55);
+        numbers.put(3, 70);
+        numbers.put(4, 12);
+
+        int actual = Practice.secondLargest(numbers);
+
+        // largest: 70, second-largest: 55
+        assertEquals(55, actual);
+    }
+
+    @Test
+    void testSecondLargestPositivesAndNegatives() {
+        Map<Integer, Integer> numbers = new HashMap<>();
+        numbers.put(1, -45);
+        numbers.put(2, 999);
+        numbers.put(3, -1);
+        numbers.put(4, -5);
+
+        int actual = Practice.secondLargest(numbers);
+
+        // largest: 999, second-largest: -1
+        assertEquals(-1, actual);
+    }
 }

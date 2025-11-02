@@ -56,10 +56,10 @@ public class Practice {
 
     /**
      * Finds the difference between how many odd keys are compared to even keys in
-     * an HashMap
+     * a HashMap
      * 
      * @param nums a non-empty, non-null HashMap of number keys with number values
-     * @return the difference in amoune of odds and amount of evens
+     * @return the difference in amoune of odd keys and amount of even keys
      */
     public static int evenOddDiff(Map<Integer, Integer> nums) {
         int odds = 0;
@@ -72,5 +72,20 @@ public class Practice {
             }
         }
         return odds - evens;
+    }
+
+    /**
+     * Finds the second-largest value in a HashMap
+     * 
+     * @param nums a non-empty, non-null HashMap of number keys with number values
+     * @return the second-largest value
+     */
+    public static int secondLargest(Map<Integer, Integer> nums) {
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int num : nums.values()) {
+            list.add(num);
+        }
+        Collections.sort(list);
+        return list.get(list.size() - 2);
     }
 }
